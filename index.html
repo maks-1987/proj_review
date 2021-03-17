@@ -14,30 +14,35 @@
       <nav class="navigation"> 
         <ul> 
           <li class="navigation__item active"><a href="#">О нас</a></li>
-          <li class="navigation__item services"><a href="#"> <span>Услуги</span>
-              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
-              </svg></a>
-            <ul class="services__container">
-              <li class="services__item"><a href="#">Услуга 1</a></li>
-              <li class="services__item"> <a href="#">Услуга 2 </a></li>
-              <li class="services__item"><a href="#">Услуга 3</a></li>
-            </ul>
+          <li class="navigation__item services">
+            <div class="services__wrapper"><a href="#"> <span>Услуги</span>
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                </svg></a>
+              <ul class="services__container">
+                <li class="services__item"><a href="#">Услуга 1</a></li>
+                <li class="services__item"> <a href="#">Услуга 2 </a></li>
+                <li class="services__item"><a href="#">Услуга 3</a></li>
+              </ul>
+            </div>
           </li>
           <li class="navigation__item"><a href="#">Вакансии</a></li>
           <li class="navigation__item"><a href="#">Новости</a></li>
-          <li class="navigation__item agre"><a href="#"> <span>Соглашения</span>
-              <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
-              </svg></a>
-            <ul class="agre__container">
-              <li class="agre__item"> <a href="#">Соглашения 1 </a></li>
-              <li class="agre__item"> <a href="#">Соглашения 2</a></li>
-              <li class="agre__item"> <a href="#">Соглашения 3</a></li>
-            </ul>
+          <li class="navigation__item agre">
+            <div class="agre__wrapper"> <a href="#"> <span>Соглашения</span>
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5"></path>
+                </svg></a>
+              <ul class="agre__container">
+                <li class="agre__item"> <a href="#">Соглашения 1 </a></li>
+                <li class="agre__item"> <a href="#">Соглашения 2</a></li>
+                <li class="agre__item"> <a href="#">Соглашения 3</a></li>
+              </ul>
+            </div>
           </li>
-          <div class="user_profile"> <a href="#">User name</a></div>
         </ul>
+        <div class="enter"><a href="#">Войти</a></div>
+        <div class="register btn-common"><a href="#">Зарегистрироваться</a></div>
       </nav>
     </div>
     <div class="burger-menu"> 
@@ -60,25 +65,37 @@
                 </svg></a></div>
           </li>
         </ul>
+        <div class="enter"><a href="#">Войти</a></div>
+        <div class="register"> <a href="#">Зарегистрироваться</a></div>
       </div>
     </div>
   </div>
 </header>
       <main class="content"> 
-        <div class="search-numbers"> 
+        <div class="search-room"> 
           <div class="container">
-            <div class="search-numbers__form card-form">
-              <h1 class="card-form__title">Найдём номера под ваши пожелания </h1>
-              <form class="card-form__body">
-                <label for="in">Прибытие</label>
-                <input type="date" id="in" name="in">
-                <label for="out">Выезд</label>
-                <input type="date" id="out" name="out">
-                <p>Укажите месяц: </p>
-                <input type="month" name="month">
-                <input type="submit" value="Отправить">
+            <div class="search-room__content card-room">
+              <h1 class="card-room__title">Найдём номера под ваши пожелания </h1>
+              <form class="card-room__body" action="#" id="form">
+                <div class="card-room__body-arrival">
+                  <label for="arrival">Прибытие</label>
+                  <input class="arrival" type="text" id="arrival" name="arrival" placeholder="ДД.ММ.ГГГГ">
+                </div>
+                <div class="card-room__body-departure">
+                  <label for="departure">Выезд</label>
+                  <input class="departure" type="text" id="departure" name="departure" placeholder="ДД.ММ.ГГГГ">
+                </div>
+                <div class="card-room__body-guest">
+                  <p>Гости</p>
+                  <select class="guest" name="select-guest">
+                    <option value="default">Сколько гостей</option>
+                    <option value="adults">Взрослые </option>
+                    <option value="kids">Дети</option>
+                    <option value="babies">Младенцы</option>
+                  </select>
+                </div>
               </form>
-              <div class="card-form__btn"></div>
+              <input class="card-room__btn btn-common" type="submit" value="Подобрать номер">
             </div>
             <p class="description">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
           </div>

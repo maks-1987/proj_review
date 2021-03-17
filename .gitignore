@@ -1,0 +1,11 @@
+*source
+*.config
+*.log
+node_modules/
+package-lock.json
+dist/
+.vscode/
+*pug_exampl/
+*.fig
+/*.[pjg][npi][gf]
+
