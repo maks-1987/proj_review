@@ -857,20 +857,44 @@ body {
       flex-wrap: wrap;
       justify-content: space-between; }
       .search-room .card-room__body label,
-      .search-room .card-room__body p {
+      .search-room .card-room__body .guests {
         font-family: 'Montserrat-Bold';
         font-size: 12px;
         /* identical to box height */
         text-transform: uppercase;
         line-height: 25px; }
-      .search-room .card-room__body input::placeholder {
+      .search-room .card-room__body input::placeholder,
+      .search-room .card-room__body .guest-main {
         color: rgba(31, 32, 65, 0.75); }
-      .search-room .card-room__body input,
-      .search-room .card-room__body .guest {
+      .search-room .card-room__body .arrival,
+      .search-room .card-room__body .departure,
+      .search-room .card-room__body .guest-main,
+      .search-room .card-room__body .guest-select {
+        position: relative;
         padding: 10px 32px 10px 15px;
         border: 1px solid rgba(31, 32, 65, 0.25);
         border-radius: 4px;
-        width: 100%; }
+        width: 100%;
+        z-index: 1;
+        background: transparent; }
+      .search-room .card-room__body .arrival-wrapper,
+      .search-room .card-room__body .departure-wrapper {
+        position: relative; }
+      .search-room .card-room__body .arrival-wrapper:after,
+      .search-room .card-room__body .departure-wrapper:after,
+      .search-room .card-room__body .guest-main:after {
+        content: "";
+        display: block;
+        background: url(7e77313e402d1abd123bb4cba5d2fec0.png) 50%/auto no-repeat;
+        height: 12px;
+        width: 12px;
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        transition: transform 0.3s; }
+      .search-room .card-room__body .active-day.arrival-wrapper:after, .search-room .card-room__body .active-day.departure-wrapper:after, .search-room .card-room__body .active-day.guest-main:after {
+        transform: translateY(-50%) rotate(180deg); }
       .search-room .card-room__body-arrival {
         flex: 0 1 47%;
         padding-right: 0; }
@@ -879,6 +903,57 @@ body {
       .search-room .card-room__body-guest {
         flex: 0 1 100%;
         margin-top: 20px; }
+      .search-room .card-room__body .guest-main {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        cursor: pointer; }
+        .search-room .card-room__body .guest-main:hover {
+          outline: -webkit-focus-ring-color auto 1px; }
+      .search-room .card-room__body .guest-select {
+        padding: 10px 15px 10px 15px;
+        font-family: 'Montserrat-Bold';
+        font-size: 12px;
+        /* identical to box height */
+        text-transform: uppercase;
+        line-height: 22px;
+        border-top: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0; }
+        .search-room .card-room__body .guest-select__item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 7px; }
+          .search-room .card-room__body .guest-select__item .subtract,
+          .search-room .card-room__body .guest-select__item .add {
+            font-family: 'Montserrat-Regular';
+            font-size: 14px;
+            width: 35px;
+            height: 30px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(31, 32, 65, 0.5);
+            border: 1px solid rgba(31, 32, 65, 0.5);
+            border-radius: 50%;
+            line-height: 28px;
+            cursor: pointer; }
+            .search-room .card-room__body .guest-select__item .subtract:hover,
+            .search-room .card-room__body .guest-select__item .add:hover {
+              filter: opacity(0.5); }
+          .search-room .card-room__body .guest-select__item .adults-num,
+          .search-room .card-room__body .guest-select__item .children-num,
+          .search-room .card-room__body .guest-select__item .babies-num {
+            margin: 0 10px; }
+        .search-room .card-room__body .guest-select .item-name {
+          flex: 1 1 80%; }
+      .search-room .card-room__body .guest-confirm {
+        justify-content: space-between;
+        color: #bc9cff;
+        padding-top: 15px;
+        margin-bottom: 0px; }
+        .search-room .card-room__body .guest-confirm__clear:hover, .search-room .card-room__body .guest-confirm__apply:hover {
+          cursor: pointer;
+          filter: opacity(0.5); }
     .search-room .card-room__btn {
       margin-top: 31px;
       color: #ffffff;

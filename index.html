@@ -79,19 +79,34 @@
               <form class="card-room__body" action="#" id="form">
                 <div class="card-room__body-arrival">
                   <label for="arrival">Прибытие</label>
-                  <input class="arrival" type="text" id="arrival" name="arrival" placeholder="ДД.ММ.ГГГГ">
+                  <div class="arrival-wrapper active-day"> 
+                    <input class="arrival" type="text" id="arrival" name="arrival" placeholder="ДД.ММ.ГГГГ">
+                  </div>
                 </div>
                 <div class="card-room__body-departure">
                   <label for="departure">Выезд</label>
-                  <input class="departure" type="text" id="departure" name="departure" placeholder="ДД.ММ.ГГГГ">
+                  <div class="departure-wrapper"> 
+                    <input class="departure" type="text" id="departure" name="departure" placeholder="ДД.ММ.ГГГГ">
+                  </div>
                 </div>
                 <div class="card-room__body-guest">
-                  <p>Гости</p>
-                  <select class="guest" name="select-guest"> 
-                    <option value="adults">Взрослые </option>
-                    <option value="kids">Дети</option>
-                    <option value="babies">Младенцы</option>
-                  </select>
+                  <p class="guests">Гости</p>
+                  <div class="guest-main">3</div>
+                  <div class="guest-select"> 
+                    <div class="guest-select__item"> <span class="item-name">Взрослые</span><span class="subtract">-</span>
+                      <div class="adults-num">0</div><span class="add">+</span>
+                    </div>
+                    <div class="guest-select__item"><span class="item-name">Дети</span><span class="subtract">-</span>
+                      <div class="children-num">0</div><span class="add">+</span>
+                    </div>
+                    <div class="guest-select__item"><span class="item-name">Младенцы</span><span class="subtract">-</span>
+                      <div class="babies-num">0</div><span class="add">+</span>
+                    </div>
+                    <div class="guest-select__item guest-confirm">
+                      <div class="guest-confirm__clear">Очистить  </div>
+                      <div class="guest-confirm__apply">Применить</div>
+                    </div>
+                  </div>
                 </div>
               </form>
               <input class="card-room__btn btn-common" type="submit" value="Подобрать номер">
