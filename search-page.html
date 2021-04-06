@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Toxin</title>
+    <title>Search-page</title>
   <link href="main.css" rel="stylesheet"></head>
   <body>
     <div class="wrapper"> 
@@ -72,51 +72,38 @@
   </div>
 </header>
       <main class="content"> 
-        <div class="search-room"> <a href="search-page.html">search-page.html</a>
-          <div class="container">
-            <div class="search-room__content card-room">
-              <h1 class="card-room__title">Найдём номера под ваши пожелания </h1>
-              <form class="card-room__body" action="#" id="form">
-                <div class="card-room__body-arrival">
-                  <label for="arrival">Прибытие</label>
-                  <div class="arrival-wrapper">
-                    <input class="arrival" type="text" id="arrival" name="arrival" placeholder="ДД.ММ.ГГГГ">
-                  </div>
-                </div>
-                <div class="card-room__body-departure">
-                  <label for="departure">Выезд</label>
-                  <div class="departure-wrapper"> 
-                    <input class="departure" type="text" id="departure" name="departure" placeholder="ДД.ММ.ГГГГ">
-                  </div>
-                </div>
-<div class="common-ddwn">
-  <p class="common-ddwn__label">Гости</p>
-  <div class="common-ddwn__text">Сколько гостей</div>
-  <div class="common-ddwn__select ddwn-select">
-    <div class="ddwn-select__item item-1"> <span class="item-name">Взрослые</span><span class="subtract">-</span>
-      <div class="adults-num item-1-num">0</div><span class="add">+</span>
-    </div>
-    <div class="ddwn-select__item item-2"><span class="item-name">Дети</span><span class="subtract">-</span>
-      <div class="children-num item-2-num">0</div><span class="add">+</span>
-    </div>
-    <div class="ddwn-select__item item-3"><span class="item-name">Младенцы</span><span class="subtract">-</span>
-      <div class="babies-num item-3-num">0</div><span class="add">+</span>
-    </div>
-    <div class="ddwn-select__item ddwn-confirm">
-      <div class="ddwn-confirm__clear">Очистить  </div>
-      <div class="ddwn-confirm__apply">Применить</div>
+        <div class="container">
+          <div class="search-page">
+            <aside class="search-filter"> 
+<div class="filter-data-ddwn">
+  <div class="label" for="interval">даты пребывания в отеле</div>
+  <div class="filter-data-wrapper">
+    <input class="interval" type="text" id="interval" name="interval" placeholder="01 янв - 02 янв">
+  </div>
+  <div class="common-ddwn">
+    <p class="common-ddwn__label">Гости</p>
+    <div class="common-ddwn__text">Сколько гостей</div>
+    <div class="common-ddwn__select ddwn-select">
+      <div class="ddwn-select__item item-1"> <span class="item-name">Взрослые</span><span class="subtract">-</span>
+        <div class="adults-num item-1-num">0</div><span class="add">+</span>
+      </div>
+      <div class="ddwn-select__item item-2"><span class="item-name">Дети</span><span class="subtract">-</span>
+        <div class="children-num item-2-num">0</div><span class="add">+</span>
+      </div>
+      <div class="ddwn-select__item item-3"><span class="item-name">Младенцы</span><span class="subtract">-</span>
+        <div class="babies-num item-3-num">0</div><span class="add">+</span>
+      </div>
     </div>
   </div>
 </div>
-<div class="common-arrow-btn">
-  <input class="btn-common" type="submit" value="Подобрать номер">
-  <svg class="btn-arrow" width="17" height="18" viewBox="0 0 17 18" xmlns="http://www.w3.org/2000/svg">
-    <path d="M8.36252 0.984375L16.3781 9L8.36252 17.0156L6.95627 15.6094L12.5344 9.98438H0.346894V8.01562H12.5344L6.95627 2.39062L8.36252 0.984375Z" fill=""></path>
-  </svg>
-</div>
-              </form>
+            </aside>
+            <div class="search-result">
+              <div class="search-result__title">Номера, которые мы для вас подобрали</div>
+              <div class="search-result__body"> 
+                <div class="search-cards"></div>
+              </div>
+              <div class="search-result__pagination"> </div>
             </div>
-            <p class="description">Лучшие номера для вашей работы, отдыха и просто вдохновения</p>
           </div>
         </div>
       </main>
