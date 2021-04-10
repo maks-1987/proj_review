@@ -75,25 +75,88 @@
         <div class="container">
           <div class="search-page">
             <aside class="search-filter"> 
-<div class="filter-data-ddwn">
-  <div class="label" for="interval">даты пребывания в отеле</div>
-  <div class="filter-data-wrapper">
-    <input class="interval" type="text" id="interval" name="interval" placeholder="01 янв - 02 янв">
+<div class="filter-date-ddwn common-ddwn">
+  <div class="filter-date-ddwn__label common-ddwn__label">даты пребывания в отеле</div>
+  <div class="filter-date-ddwn__text common-ddwn__text">19 авг - 23 авг</div>
+  <div class="filter-date-ddwn__wrapper common-ddwn__select" id="interval">
+    <div class="date-1 common-ddwn__select-item item-1"> <span class="item-name">19 авг - 23 сен</span></div>
+    <div class="date-2 common-ddwn__select-item item-2"><span class="item-name">19 авг - 23 окт</span></div>
+    <div class="date-3 common-ddwn__select-item item-3"><span class="item-name">19 авг - 23 ноя</span></div>
   </div>
-  <div class="common-ddwn">
-    <p class="common-ddwn__label">Гости</p>
-    <div class="common-ddwn__text">Сколько гостей</div>
-    <div class="common-ddwn__select ddwn-select">
-      <div class="ddwn-select__item item-1"> <span class="item-name">Взрослые</span><span class="subtract">-</span>
-        <div class="adults-num item-1-num">0</div><span class="add">+</span>
-      </div>
-      <div class="ddwn-select__item item-2"><span class="item-name">Дети</span><span class="subtract">-</span>
-        <div class="children-num item-2-num">0</div><span class="add">+</span>
-      </div>
-      <div class="ddwn-select__item item-3"><span class="item-name">Младенцы</span><span class="subtract">-</span>
-        <div class="babies-num item-3-num">0</div><span class="add">+</span>
-      </div>
+</div>
+<div class="common-ddwn">
+  <p class="common-ddwn__label">Гости</p>
+  <div class="common-ddwn__text ddwn__text-js">Сколько гостей</div>
+  <div class="common-ddwn__select ddwn__select-js">
+    <div class="common-ddwn__select-item item-1"><span class="item-name">Взрослые</span><span class="subtract">-</span>
+      <div class="adults-num item-1-num">0</div><span class="add">+</span>
     </div>
+    <div class="common-ddwn__select-item item-2"><span class="item-name">Дети</span><span class="subtract">-</span>
+      <div class="children-num item-2-num">0</div><span class="add">+</span>
+    </div>
+    <div class="common-ddwn__select-item item-3"><span class="item-name">Младенцы</span><span class="subtract">-</span>
+      <div class="babies-num item-3-num">0</div><span class="add">+</span>
+    </div>
+    <div class="common-ddwn__select-item ddwn-confirm">
+      <div class="ddwn-confirm__clear">Очистить  </div>
+      <div class="ddwn-confirm__apply">Применить</div>
+    </div>
+  </div>
+</div>
+              <div class="price-range-wrapper">
+<div class="price-range">
+  <label class="price-range__label" for="amount">Диапазон цены </label>
+  <input class="price-range__final-price" type="text" id="amount" readonly="readonly">
+</div>
+<div class="slider-range" id="slider-range"></div>
+<p class="price-range__description">Стоимость за сутки пребывания в номере</p>
+              </div>
+<div class="home-rules"> 
+  <div class="home-rules__title">правила дома</div>
+  <input type="checkbox" name="checkbox-1" id="checkbox-1">
+  <label class="home-rules__item" for="checkbox-1"> <span class="home-rules__description">Можно курить</span></label>
+  <input type="checkbox" name="checkbox-2" id="checkbox-2">
+  <label class="home-rules__item" for="checkbox-2"> <span class="home-rules__description">Можно с питомцами</span></label>
+  <input type="checkbox" name="checkbox-3" id="checkbox-3">
+  <label class="home-rules__item" for="checkbox-3"> <span class="home-rules__description">Можно пригласить гостей (до 10 человек)</span></label>
+</div>
+<div class="home-available">
+  <div class="home-available__title">доступность</div>
+  <input type="checkbox" name="wide corridor" id="wide corridor">
+  <label class="home-available__item" for="wide corridor"> <span class="home-available__notice">Широкий коридор</span><span class="home-available__description home-available__details">Ширина коридоров в номере не менее 91 см.</span></label>
+  <input type="checkbox" name="help-service" id="help-service">
+  <label class="home-available__item" for="help-service"> <span class="home-available__notice">Помощник для инвалидов</span><span class="home-available__description home-available__details">На 1 этаже вас встретит специалист  и проводит до номера.</span></label>
+</div>
+<div class="home-facilities common-ddwn">
+  <div class="home-facilities__label common-ddwn__label">удобства номера</div>
+  <div class="home-facilities__text common-ddwn__text">2 спальни, 2 кровати...</div>
+  <div class="home-facilities__wrapper common-ddwn__select">
+    <div class="bedroom common-ddwn__select-item"><span class="item-name">спальни</span><span class="subtract">-</span>
+      <div class="bedroom-num item-1-num">0</div><span class="add">+</span>
+    </div>
+    <div class="bed common-ddwn__select-item"><span class="item-name">кровати</span><span class="subtract">-</span>
+      <div class="bed-num item-2-num">0</div><span class="add">+</span>
+    </div>
+    <div class="bathroom common-ddwn__select-item"><span class="item-name">ванные комнаты</span><span class="subtract">-</span>
+      <div class="bathroom-num item-3-num">0</div><span class="add">+</span>
+    </div>
+  </div>
+</div>
+<div class="home-more-facilities">
+  <div class="home-more-facilities__title common-ddwn__text">дополнительные удобства</div>
+  <div class="home-more-facilities__wrapper common-ddwn__select">
+    <input type="checkbox" name="breakfast" id="breakfast">
+    <label class="home-more-facilities__item" for="breakfast"> <span class="home-more-facilities__description">Завтрак</span></label>
+    <input type="checkbox" name="Desk" id="Desk">
+    <label class="home-more-facilities__item" for="Desk"> <span class="home-more-facilities__description">Письменный стол</span></label>
+    <input type="checkbox" name="feeding-chair" id="feeding-chair">
+    <label class="home-more-facilities__item" for="feeding-chair"> <span class="home-more-facilities__description">Стул для кормления</span></label>
+    <input type="checkbox" name="cot" id="cot">
+    <label class="home-more-facilities__item" for="cot"> <span class="home-more-facilities__description">Кроватка</span></label>
+    <input type="checkbox" name="tv" id="tv">
+    <label class="home-more-facilities__item" for="tv"> <span class="home-more-facilities__description">Телевизор</span></label>
+    <input type="checkbox" name="shampoo" id="shampoo">
+    <label class="home-more-facilities__item" for="shampoo"> <span class="home-more-facilities__description">Шампунь</span></label>
   </div>
 </div>
             </aside>
