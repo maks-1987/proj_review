@@ -1116,6 +1116,12 @@ header {
 
 .search-result {
   flex: 1 1 70%; }
+  .search-result__title {
+    font-family: 'Montserrat-Bold';
+    font-size: 24px;
+    line-height: 40px;
+    color: #1f2041;
+    margin-bottom: 16px; }
   .search-result__body {
     display: flex;
     justify-content: space-between;
@@ -1124,7 +1130,7 @@ header {
   .search-result__item-container {
     flex: 1 1 30%;
     padding: 0 5px;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
     min-width: 0; }
   .search-result__item {
     border-radius: 4px;
@@ -1134,13 +1140,70 @@ header {
   .search-result .description-item {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     line-height: 22px;
     padding-top: 8px;
     padding-bottom: 19px; }
     .search-result .description-item.top {
+      align-items: center;
       border-bottom: 1px rgba(31, 32, 65, 0.25) solid;
-      padding-top: 19px;
+      padding-top: 20px;
       padding-bottom: 10px; }
+    .search-result .description-item__number {
+      font-family: "Montserrat-Bold";
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 17px;
+      color: #1f2041; }
+    .search-result .description-item__id {
+      font-size: 19px;
+      padding-left: 4px; }
+    .search-result .description-item__label {
+      padding-left: 8px;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #bc9cff; }
+    .search-result .description-item__price {
+      color: rgba(31, 32, 65, 0.5);
+      font-size: 12px; }
+    .search-result .description-item .price-item,
+    .search-result .description-item .currency {
+      font-weight: 900;
+      font-size: 14px; }
+    .search-result .description-item__feedback {
+      color: rgba(31, 32, 65, 0.5); }
+      .search-result .description-item__feedback span {
+        font-weight: 900;
+        font-size: 14px; }
+  .search-result__pagination {
+    margin: 0 auto;
+    text-align: center; }
+  .search-result .pagination-numbers {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-bottom: 10px; }
+    .search-result .pagination-numbers li {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 22px;
+      width: 40px;
+      height: 40px; }
+    .search-result .pagination-numbers li.active {
+      background: linear-gradient(180deg, #bc9cff, #8ba4f9); }
+    .search-result .pagination-numbers .pagination-arrow a {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #6fcf97, #66d2ea); }
+  .search-result .pagination-arrow a:after {
+    position: absolute;
+    content: url('data:image/svg+xml;charset=UTF-8,<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" version="1.1"><path d="M8.36252 0.984375L16.3781 9L8.36252 17.0156L6.95627 15.6094L12.5344 9.98438H0.346894V8.01562H12.5344L6.95627 2.39062L8.36252 0.984375Z" fill="white"/></svg>');
+    transform: translate(-50%, 27%);
+    width: 40px;
+    height: 40px; }
 
 #interval {
   line-height: 2.55;
@@ -1197,8 +1260,8 @@ header {
   .slider .slick-dots {
     position: absolute;
     display: flex;
-    bottom: 19px;
-    right: 15px;
+    bottom: 17px;
+    right: 13px;
     font-size: 0px; }
     .slider .slick-dots li {
       list-style: none;
